@@ -32,12 +32,14 @@
         </div>
 
         <div>
-          <h4 class="footer-heading">Reservations</h4>
+          <h4 class="footer-heading">Reservations &amp; Policies</h4>
           <ul class="footer-links">
             <li><a href="book-now.php">Book Now (Direct Engine)</a></li>
             <li><a href="quick-pay.php">Quick Pay Portal</a></li>
             <li><a href="contact.php">Contact Us &amp; Map</a></li>
-            <li><a href="https://wa.me/917708681651" target="_blank" rel="noopener">WhatsApp Concierge</a></li>
+            <li><a href="terms-and-conditions.php">Terms &amp; Conditions</a></li>
+            <li><a href="cancellation-policy.php">Cancellation Policy</a></li>
+            <li><a href="privacy-policy.php">Privacy Policy</a></li>
           </ul>
         </div>
 

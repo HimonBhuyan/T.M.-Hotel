@@ -15,6 +15,9 @@
     { "source": "/near-by-attractions.php", "destination": "/near-by-attractions" },
     { "source": "/contact.php", "destination": "/contact" },
     { "source": "/quick-pay.php", "destination": "/quick-pay" },
-    { "source": "/book-now.php", "destination": "/book-now" }
+    { "source": "/book-now.php", "destination": "/book-now" },
+    { "source": "/terms-and-conditions.php", "destination": "/terms-and-conditions" },
+    { "source": "/cancellation-policy.php", "destination": "/cancellation-policy" },
+    { "source": "/privacy-policy.php", "destination": "/privacy-policy" }
   ]
 }

@@ -20,7 +20,10 @@ const pages = [
   'near-by-attractions.php',
   'contact.php',
   'quick-pay.php',
-  'book-now.php'
+  'book-now.php',
+  'terms-and-conditions.php',
+  'cancellation-policy.php',
+  'privacy-policy.php'
 ];
 
 fs.rmSync(distDir, { recursive: true, force: true });
