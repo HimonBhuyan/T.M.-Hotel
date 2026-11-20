@@ -836,7 +836,10 @@
   function initScrollSpy() {
     const navLinks = Array.from(document.querySelectorAll('.desktop-nav__link'));
     const sections = navLinks
-      .map((link) => document.querySelector(link.getAttribute('href')))
+      .map((link) => {
+        const href = link.getAttribute('href') || '';
+        return href.startsWith('#') && href.length > 1 ? document.querySelector(href) : null;
+      })
       .filter(Boolean);
     if (!sections.length) return;
 
@@ -941,35 +944,37 @@
      Bootstrap Everything
   ------------------------------------------------------------------------ */
   document.addEventListener('DOMContentLoaded', () => {
-    populateRoomSelectors();
-    syncDates();
     try {
-      const params = new URLSearchParams(window.location.search);
-      const roomParam = params.get('room');
-      const bookRoomEl = document.getElementById('bookingRoom');
-      if (roomParam && bookRoomEl && [...bookRoomEl.options].some((o) => o.value === roomParam)) {
-        bookRoomEl.value = roomParam;
+      populateRoomSelectors();
+      syncDates();
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const roomParam = params.get('room');
+        const bookRoomEl = document.getElementById('bookingRoom');
+        if (roomParam && bookRoomEl && [...bookRoomEl.options].some((o) => o.value === roomParam)) {
+          bookRoomEl.value = roomParam;
+        }
+      } catch (_) { }
+      renderRooms();
+      initRoomFilters();
+      renderSightseeing();
+      initSightseeingFilters();
+      renderLandmarks();
+      renderGallery();
+      initGalleryFilterAndLightbox();
+      initTestimonials();
+      initFaqs();
+      initNavigation();
+      initModals();
+      initBookingDockAndModal();
+      initQuickPay();
+      initContactForm();
+      initScrollSpy();
+      updateBookingSummary();
+    } finally {
+      if (window.TMAnimations) {
+        window.TMAnimations.init();
       }
-    } catch (_) { }
-    renderRooms();
-    initRoomFilters();
-    renderSightseeing();
-    initSightseeingFilters();
-    renderLandmarks();
-    renderGallery();
-    initGalleryFilterAndLightbox();
-    initTestimonials();
-    initFaqs();
-    initNavigation();
-    initModals();
-    initBookingDockAndModal();
-    initQuickPay();
-    initContactForm();
-    initScrollSpy();
-    updateBookingSummary();
-
-    if (window.TMAnimations) {
-      window.TMAnimations.init();
     }
   });
 })();

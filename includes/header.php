@@ -20,7 +20,7 @@ $isHome = ($activeNav === 'home');
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="css/styles.css?v=9" />
+  <link rel="stylesheet" href="css/styles.css?v=10" />
 </head>
 <body class="<?php echo $isHome ? 'page-home' : 'page-subpage'; ?>">
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
@@ -38,6 +38,15 @@ $isHome = ($activeNav === 'home');
     <div class="preloader__brand">T.M. Hotel</div>
     <div class="preloader__sub">Madurai • Legacy Since 1950</div>
   </div>
+  <script>
+    setTimeout(function () {
+      var p = document.getElementById('preloader');
+      if (p && !p.classList.contains('is-done')) {
+        p.classList.add('is-done');
+        setTimeout(function () { p.style.display = 'none'; }, 900);
+      }
+    }, 1600);
+  </script>
   <?php endif; ?>
 
   <header class="site-header <?php echo $isHome ? '' : 'is-solid'; ?>" id="siteHeader">
