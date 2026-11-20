@@ -258,8 +258,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-  <script src="js/data.js?v=8" defer></script>
-  <script src="js/animations.js?v=8" defer></script>
-  <script src="js/main.js?v=8" defer></script>
+  <script src="js/data.js?v=9" defer></script>
+  <script src="js/animations.js?v=9" defer></script>
+  <script src="js/main.js?v=9" defer></script>
 </body>
 </html>

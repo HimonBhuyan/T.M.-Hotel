@@ -5,6 +5,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/backend/booking.php", "destination": "/api/booking" },
     { "source": "/api/booking.php", "destination": "/api/booking" },
     { "source": "/index.php", "destination": "/" },
     { "source": "/rooms.php", "destination": "/rooms" },

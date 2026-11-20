@@ -40,7 +40,7 @@
 
   async function submitToBackend(payload) {
     try {
-      const res = await fetch('api/booking.php', {
+      const res = await fetch('backend/booking.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

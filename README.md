@@ -25,7 +25,7 @@ A modern, animation-rich, mobile-responsive multi-page website redesign for **T.
 - **Quick Pay Portal (`quick-pay.php` & Modal):** Advance deposit and invoice settlement reference generator (`UPI`, `Card`, `NEFT`).
 - **Sight Seeing In Madurai (`near-by-attractions.php`):** Filterable guide to 8 Madurai landmarks with real photography, exact distances from T.M. Hotel, and direct Google Maps route links.
 - **Interactive Madurai Google Map (`#location`):** Embedded Google Map centered on T.M. Hotel that dynamically updates when selecting transit hubs and landmarks.
-- **Dual Backend Support:** Works natively with PHP (`api/booking.php` writing to `data/submissions.json`) on XAMPP/Apache and via a Node.js Serverless Function (`api/booking.js`) on Vercel.
+- **Dual Backend Support:** Works natively with PHP (`backend/booking.php` writing to `data/submissions.json`) on XAMPP/Apache and via a Node.js Serverless Function (`api/booking.js`) on Vercel.
 
 ---
 
@@ -49,8 +49,9 @@ A modern, animation-rich, mobile-responsive multi-page website redesign for **T.
 
 ```text
 ├── api/
-│   ├── booking.php              # Local XAMPP/PHP JSON API (persists to data/submissions.json)
 │   └── booking.js               # Vercel Node.js Serverless Function (/api/booking)
+├── backend/
+│   └── booking.php              # Local XAMPP/PHP JSON API (persists to data/submissions.json)
 ├── assets/images/               # Property & 8 Madurai sightseeing photographs
 ├── css/styles.css               # Design tokens, responsive grids, modals & animations
 ├── dist/                        # Pre-built static HTML/CSS/JS/assets output for Vercel
@@ -80,7 +81,7 @@ A modern, animation-rich, mobile-responsive multi-page website redesign for **T.
    ```bash
    php -S 127.0.0.1:8080
    ```
-3. Local booking, Quick Pay, and contact form submissions are handled by `api/booking.php` and logged to `data/submissions.json` (git-ignored).
+3. Local booking, Quick Pay, and contact form submissions are handled by `backend/booking.php` and logged to `data/submissions.json` (git-ignored).
 
 ---
 
@@ -89,7 +90,7 @@ A modern, animation-rich, mobile-responsive multi-page website redesign for **T.
 This repository is ready for one-click import into Vercel:
 
 1. **Static Output (`dist/`):** Pre-compiled static HTML + assets (`buildCommand: ""` in `vercel.json`, so Vercel does not need a PHP binary).
-2. **Serverless API (`api/booking.js`):** Handles `GET` health checks and `POST` requests for `booking`, `quickpay`, and `contact` via `vercel.json` rewrite (`/api/booking.php` → `/api/booking`).
+2. **Serverless API (`api/booking.js`):** Handles `GET` health checks and `POST` requests for `booking`, `quickpay`, and `contact` via `vercel.json` rewrite (`/backend/booking.php` → `/api/booking`).
 3. **Clean & Legacy Routes:** Both clean URLs (`/rooms`, `/deluxe-room`, `/near-by-attractions`) and `.php` paths (`/rooms.php`, `/deluxe-room.php`, etc.) resolve seamlessly.
 
 If you edit any `.php` page locally, regenerate `dist/` before committing:
@@ -100,7 +101,7 @@ npm run build:vercel
 
 ---
 
-## API Reference (`/api/booking.php` or `/api/booking`)
+## API Reference (`/backend/booking.php` or `/api/booking`)
 
 - **`GET`** — Returns `{ "status": "ok", "service": "..." }`.
 - **`POST`** — Accepts JSON with `type` (`"booking"`, `"quickpay"`, or `"contact"`):

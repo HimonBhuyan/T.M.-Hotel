@@ -1,6 +1,6 @@
 <?php
 /**
- * T.M. Hotel, Madurai — Reservation, Quick Pay & Inquiry Endpoint
+ * T.M. Hotel, Madurai — Local XAMPP/PHP Reservation, Quick Pay & Inquiry Endpoint
  * Stores validated submissions locally in data/submissions.json
  */
 

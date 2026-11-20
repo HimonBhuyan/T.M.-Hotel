@@ -20,7 +20,7 @@ $isHome = ($activeNav === 'home');
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <link rel="stylesheet" href="css/styles.css?v=9" />
 </head>
 <body class="<?php echo $isHome ? 'page-home' : 'page-subpage'; ?>">
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
