@@ -1,0 +1,9 @@
+{
+  "name": "tm-hotel-madurai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:vercel": "node scripts/build-vercel.mjs"
+  }
+}

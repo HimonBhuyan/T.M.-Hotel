@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T.M. Hotel, Madurai | Boutique Heritage Stay Near Meenakshi Temple &amp; Junction</title>
+  <meta name="description" content="Welcome to T.M. Hotel Madurai (Est. 1950). Our Motto is to provide a Pleasant Stay and a Homely Care to our Prestigious Customers." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css?v=8" />
+</head>
+<body class="page-home">
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+
+    <div class="preloader" id="preloader" aria-label="Loading T.M. Hotel Madurai">
+    <svg class="preloader__crest" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="6" y="6" width="68" height="68" rx="16" stroke="#DFB26B" stroke-width="1.5" />
+      <path d="M22 54V35C22 25.0589 30.0589 17 40 17C49.9411 17 58 25.0589 58 35V54" stroke="#DFB26B" stroke-width="1.8" />
+      <path d="M30 54V38C30 32.4772 34.4772 28 40 28C45.5228 28 50 32.4772 50 38V54" stroke="#C89648" stroke-width="1.5" />
+      <path d="M18 54H62" stroke="#DFB26B" stroke-width="1.8" />
+      <circle cx="40" cy="22" r="2.5" stroke="#DFB26B" stroke-width="1.5" />
+    </svg>
+    <div class="preloader__brand">T.M. Hotel</div>
+    <div class="preloader__sub">Madurai • Legacy Since 1950</div>
+  </div>
+  
+  <header class="site-header " id="siteHeader">
+    <div class="container header-inner">
+      <a href="/" class="brand-logo" aria-label="T.M. Hotel Madurai Home">
+        <svg class="brand-logo__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="11" stroke="#DFB26B" stroke-width="1.5" />
+          <path d="M13 35V22C13 15.9249 17.9249 11 24 11C30.0751 11 35 15.9249 35 22V35" stroke="#DFB26B" stroke-width="1.6" />
+          <path d="M19 35V24C19 21.2386 21.2386 19 24 19C26.7614 19 29 21.2386 29 24V35" stroke="#C89648" stroke-width="1.4" />
+          <path d="M10 35H38" stroke="#DFB26B" stroke-width="1.5" />
+        </svg>
+        <div class="brand-logo__text">
+          <span class="brand-logo__name">T.M. Hotel</span>
+          <span class="brand-logo__tag">Madurai • Est. 1950</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="/" class="desktop-nav__link is-active">Home</a>
+
+        <div class="nav-dropdown" id="roomsDropdown">
+          <a
+            href="/rooms"
+            class="desktop-nav__link nav-dropdown__trigger "
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Rooms <span class="nav-caret" aria-hidden="true">&#9662;</span>
+          </a>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="/rooms" class="nav-dropdown__item " role="menuitem">
+              <strong>All Rooms &amp; Tariff</strong>
+              <span>Overview of all 57 A/C rooms</span>
+            </a>
+            <a href="/deluxe-room" class="nav-dropdown__item " role="menuitem">
+              <strong>Deluxe Room</strong>
+              <span>204 sq. ft. • City View • From ₹2,150</span>
+            </a>
+            <a href="/executive-room" class="nav-dropdown__item " role="menuitem">
+              <strong>Executive Room</strong>
+              <span>228 sq. ft. • Terrace Option • From ₹2,650</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="/gallery" class="desktop-nav__link ">Gallery</a>
+        <a href="/near-by-attractions" class="desktop-nav__link ">Sight Seeing</a>
+        <a href="/contact" class="desktop-nav__link ">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="/quick-pay" class="btn btn--outline-light btn--sm header-quickpay ">
+          Quick Pay
+        </a>
+        <a href="/book-now" class="btn btn--primary btn--sm header-book-btn" data-magnetic>
+          Book Now
+        </a>
+        <button
+          type="button"
+          class="hamburger-btn"
+          id="hamburgerBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileDrawer"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <nav class="mobile-drawer__links" aria-label="Mobile Navigation">
+      <a href="/" class="mobile-drawer__link">Home <span>01</span></a>
+      <div class="mobile-drawer__group">
+        <button type="button" class="mobile-drawer__link mobile-drawer__accordion-btn" id="mobileRoomsToggle" aria-expanded="false">
+          Rooms &amp; Tariff <span>&#9662;</span>
+        </button>
+        <div class="mobile-drawer__sublinks" id="mobileRoomsSub">
+          <a href="/rooms">All Rooms Overview</a>
+          <a href="/deluxe-room">Deluxe Double A/C Room</a>
+          <a href="/executive-room">Executive Double A/C Room</a>
+        </div>
+      </div>
+      <a href="/gallery" class="mobile-drawer__link">Gallery <span>03</span></a>
+      <a href="/near-by-attractions" class="mobile-drawer__link">Sight Seeing <span>04</span></a>
+      <a href="/contact" class="mobile-drawer__link">Contact Us <span>05</span></a>
+      <a href="/quick-pay" class="mobile-drawer__link">Quick Pay <span>06</span></a>
+    </nav>
+
+    <div class="mobile-drawer__footer">
+      <a href="/book-now" class="btn btn--primary">Book Direct (Save 10%: TM1950)</a>
+      <a href="/quick-pay" class="btn btn--outline-light">Quick Pay Settlement</a>
+      <p>50, West Perumal Maistry Street, Madurai - 625001<br />Front Desk 24/7: +91 7708681651</p>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Welcome to T.M. Hotel Madurai">
+      <div class="hero__media">
+        <img
+          src="assets/images/hero-hotel.jpg"
+          alt="Warm golden-hour architectural lobby of T.M. Hotel Madurai"
+          class="hero__img"
+        />
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <div class="hero__top">
+          <div class="hero__badge hero__animate">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            T.M. Group of Companies • Est. 1950
+          </div>
+          <h1 class="hero__title hero__animate">
+            <span class="line">Welcome To T.M. Hotel</span>
+            <span class="line"><em>Madurai,</em> Steps from</span>
+            <span class="line">the Sacred Temple.</span>
+          </h1>
+          <p class="hero__subtitle hero__animate">
+            “Our Motto is to provide a Pleasant Stay and a Homely Care to our Prestigious Customers.” — 57 air-conditioned Deluxe &amp; Executive rooms, 2 mins from Madurai Railway Junction and 5 mins from Meenakshi Amman Temple.
+          </p>
+
+          <div class="price-compare-card hero__animate">
+            <span class="price-compare-card__tag">Lowest Direct Price</span>
+            <span style="font-size: 0.9rem;">
+              Direct Stay From <strong style="color: var(--accent-brass-bright);">₹2,150 / night</strong>
+              <span style="text-decoration: line-through; opacity: 0.6; margin-left: 0.4rem;">₹3,500</span>
+            </span>
+            <a href="/book-now" style="font-size: 0.78rem; color: var(--accent-brass-bright); text-decoration: underline;">
+              Use Code TM1950 (10% Off)
+            </a>
+          </div>
+
+          <div class="hero__cta-row hero__animate">
+            <a href="/book-now" class="btn btn--primary" data-magnetic>
+              Book Now
+            </a>
+            <a href="/rooms" class="btn btn--outline-light" data-magnetic>
+              Explore Rooms
+            </a>
+            <a href="/quick-pay" class="btn btn--outline-light">
+              Quick Pay
+            </a>
+          </div>
+        </div>
+
+        <!-- Live Quick-Booking Glass Dock -->
+        <form class="booking-dock hero__animate" id="heroBookingDock" aria-label="Quick availability search">
+          <div class="dock-field">
+            <label for="dockCheckIn">Check-In (12:00 PM)</label>
+            <input type="date" id="dockCheckIn" required />
+          </div>
+          <div class="dock-field">
+            <label for="dockCheckOut">Check-Out (11:00 AM)</label>
+            <input type="date" id="dockCheckOut" required />
+          </div>
+          <div class="dock-field">
+            <label for="dockRoom">Room Preference</label>
+            <select id="dockRoom"></select>
+          </div>
+          <div class="dock-field">
+            <label for="dockGuests">Guests</label>
+            <select id="dockGuests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary" data-magnetic>
+            Check Rate &rarr;
+          </button>
+        </form>
+
+        <a href="#heritage" class="scroll-cue hero__animate" aria-label="Scroll down to explore T.M. Hotel">
+          <span class="scroll-cue__mouse" aria-hidden="true">
+            <span class="scroll-cue__wheel"></span>
+          </span>
+          <span class="scroll-cue__text">Scroll Down to Explore</span>
+          <span class="scroll-cue__arrow" aria-hidden="true">&darr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Infinite Heritage Marquee Ticker -->
+    <div class="marquee-bar" aria-label="Property Highlights">
+      <div class="marquee-track">
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>2 Min Walk to Madurai Junction (650m)</span>
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>5 Min Walk to Meenakshi Amman Temple (700m)</span>
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>57 Air-Conditioned Boutique Rooms</span>
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>Direct Booking Privilege: Promo Code TM1950 (10% Off)</span>
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>24-Hour Front Desk, Wi-Fi &amp; Room Service</span>
+      </div>
+      <div class="marquee-track" aria-hidden="true">
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>2 Min Walk to Madurai Junction (650m)</span>
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>5 Min Walk to Meenakshi Amman Temple (700m)</span>
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>57 Air-Conditioned Boutique Rooms</span>
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>Direct Booking Privilege: Promo Code TM1950 (10% Off)</span>
+        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>24-Hour Front Desk, Wi-Fi &amp; Room Service</span>
+      </div>
+    </div>
+
+    <!-- Heritage & About Section -->
+    <section class="section" id="heritage">
+      <div class="container heritage-grid">
+        <div class="heritage-media reveal-up">
+          <div class="image-curtain">
+            <img src="assets/images/terrace-view.jpg" alt="Twilight view toward Meenakshi Amman Temple gopuram from T.M. Hotel Madurai" loading="lazy" />
+          </div>
+          <div class="heritage-floating-card">
+            <div class="heritage-floating-card__num">1950</div>
+            <div class="heritage-floating-card__text">
+              <strong>T.M. Group Legacy</strong><br />
+              Seven decades of trusted South Indian hospitality in Madurai Main.
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-up" data-delay="120">
+          <span class="eyebrow">A Division of T.M. Group</span>
+          <h2 class="display-title">
+            Pleasant Stay &amp; <em>Homely Care</em> Since 1950.
+          </h2>
+          <p class="lead-copy" style="margin-top: 1.25rem;">
+            T.M. Hotel is a division of the T.M. Group of Companies established in 1950 — a boutique hotel featuring well-designed decor for a comfortable stay at a budgeted price.
+          </p>
+          <p style="color: var(--text-muted); margin-top: 0.9rem;">
+            Situated at 50, West Perumal Maistry Street right opposite Madurai Railway Junction (~650m, 2-minute walk) and Central Bus Stand – Periyar (~350m), we are just a 5-minute walk from the historic Madurai Meenakshi Amman Temple (~700m) and 11.9 km from Madurai Airport. Our 57 fully equipped rooms deliver spacious comfort and 24-hour care.
+          </p>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-item__val" data-count="1950">1950</div>
+              <div class="stat-item__label">Group Founded</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__val" data-count="57">57</div>
+              <div class="stat-item__label">A/C Rooms</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__val" data-count="2" data-suffix=" min">2 min</div>
+              <div class="stat-item__label">To Railway Jn.</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__val" data-count="5" data-suffix=" min">5 min</div>
+              <div class="stat-item__label">To Temple</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rooms & Tariff Showcase -->
+    <section class="section section--sand" id="rooms">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div class="reveal-up">
+            <span class="eyebrow">Accommodations</span>
+            <h2 class="display-title">Thoughtful <em>Boutique</em> Stays</h2>
+            <p class="lead-copy" style="margin-top: 0.65rem;">
+              Explore our Deluxe Double A/C and Executive Double A/C rooms, or jump directly to dedicated room pages.
+            </p>
+          </div>
+          <div class="filter-pills reveal-up" id="roomFilterPills" role="group" aria-label="Filter rooms by category">
+            <button type="button" class="filter-pill is-active" data-filter="all">All Rooms</button>
+            <button type="button" class="filter-pill" data-filter="deluxe">Deluxe A/C</button>
+            <button type="button" class="filter-pill" data-filter="executive">Executive A/C</button>
+            <button type="button" class="filter-pill" data-filter="terrace">Terrace View</button>
+          </div>
+        </div>
+
+        <div class="rooms-grid" id="roomsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Amenities & Guest Services (All 6 Official tmhotel.in Amenities) -->
+    <section class="section section--dark" id="amenities">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <span class="eyebrow">Hotel Facilities</span>
+          <h2 class="display-title">Amenities &amp; <em>24-Hour</em> Care</h2>
+          <p class="lead-copy">
+            Thoughtfully equipped across all 57 rooms for a pleasant stay and homely care in the heart of Madurai.
+          </p>
+        </div>
+
+        <div class="amenities-grid">
+          <article class="amenity-card reveal-up" data-delay="0">
+            <div class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+            </div>
+            <h3 class="amenity-card__title">24 Hrs Room Service</h3>
+            <p class="amenity-card__desc">Round-the-clock room service and 24-hour front desk support for late-night arrivals and early temple darshan departures.</p>
+          </article>
+
+          <article class="amenity-card reveal-up" data-delay="70">
+            <div class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <circle cx="12" cy="20" r="1" />
+              </svg>
+            </div>
+            <h3 class="amenity-card__title">Unlimited WiFi</h3>
+            <p class="amenity-card__desc">Complimentary unlimited high-speed wireless internet access across all guest rooms and lobby areas.</p>
+          </article>
+
+          <article class="amenity-card reveal-up" data-delay="140">
+            <div class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M6 3h12l2 5-3 2v11H7V10L4 8l2-5z" />
+              </svg>
+            </div>
+            <h3 class="amenity-card__title">Laundry Service</h3>
+            <p class="amenity-card__desc">Convenient laundry and dry-cleaning service along with daily housekeeping for short and extended Madurai stays.</p>
+          </article>
+
+          <article class="amenity-card reveal-up" data-delay="210">
+            <div class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 12h18M3 6h18M3 18h12" />
+              </svg>
+            </div>
+            <h3 class="amenity-card__title">Travel Assistance</h3>
+            <p class="amenity-card__desc">Madurai sightseeing tours, car rentals, temple guidance, and Madurai International Airport transfer assistance.</p>
+          </article>
+
+          <article class="amenity-card reveal-up" data-delay="280">
+            <div class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="14" rx="2" />
+                <path d="M8 21h8M12 18v3" />
+              </svg>
+            </div>
+            <h3 class="amenity-card__title">Business Center</h3>
+            <p class="amenity-card__desc">Dedicated business center facilities and quiet work-ready spaces for corporate and transit visitors.</p>
+          </article>
+
+          <article class="amenity-card reveal-up" data-delay="350">
+            <div class="amenity-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 5v14M5 12h14" />
+                <rect x="3" y="3" width="18" height="18" rx="4" />
+              </svg>
+            </div>
+            <h3 class="amenity-card__title">Doctor On Call</h3>
+            <p class="amenity-card__desc">Prompt 24-hour Doctor On Call medical assistance arranged immediately through our front desk for guest peace of mind.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sight Seeing In Madurai Preview -->
+    <section class="section section--sand" id="sightseeing">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div class="reveal-up">
+            <span class="eyebrow">Near-By Attractions</span>
+            <h2 class="display-title">Sight Seeing In <em>Madurai</em></h2>
+            <p class="lead-copy" style="margin-top: 0.65rem;">
+              All 8 iconic Madurai destinations with exact distances from T.M. Hotel and instant Google Maps directions.
+            </p>
+          </div>
+          <div class="filter-pills reveal-up" id="sightseeingFilterPills" role="group" aria-label="Filter Madurai attractions">
+            <button type="button" class="filter-pill is-active" data-filter="all">All Places (8)</button>
+            <button type="button" class="filter-pill" data-filter="temples">Temples</button>
+            <button type="button" class="filter-pill" data-filter="heritage">Palaces &amp; Tanks</button>
+            <button type="button" class="filter-pill" data-filter="family">Museums &amp; Parks</button>
+          </div>
+        </div>
+
+        <div class="sightseeing-grid" id="sightseeingGrid"></div>
+
+        <div style="text-align: center; margin-top: 2.25rem;">
+          <a href="/near-by-attractions" class="btn btn--dark" data-magnetic>
+            Open Dedicated Sight Seeing Page &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Madurai Landmark Explorer + Live Google Map -->
+    <section class="section" id="location">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <span class="eyebrow">Unmatched Central Address</span>
+          <h2 class="display-title">Location &amp; <em>Interactive</em> Map</h2>
+          <p class="lead-copy">
+            Click any transit point or landmark below to inspect it live on Google Maps from 50 West Perumal Maistry Street.
+          </p>
+        </div>
+
+        <div class="landmarks-wrap">
+          <div class="landmark-buttons reveal-up" id="landmarkButtons"></div>
+
+          <div class="landmark-stage reveal-up" data-delay="120">
+            <div class="landmark-map-toolbar">
+              <div class="landmark-map-badge">
+                <span aria-hidden="true"></span>
+                Interactive Madurai Map
+              </div>
+              <button type="button" class="btn btn--outline-light btn--sm" id="resetHotelPinBtn">
+                Center on T.M. Hotel
+              </button>
+            </div>
+            <div class="landmark-map-frame">
+              <iframe
+                id="landmarkMapIframe"
+                title="T.M. Hotel Madurai Interactive Map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=T.M.+Hotel,+50,+West+Perumal+Maistry+Street,+Madurai,+Tamil+Nadu+625001&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              ></iframe>
+            </div>
+            <div id="landmarkDetail"></div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border-dark);">
+              <a
+                id="landmarkDirectionsLink"
+                href="https://www.google.com/maps/search/?api=1&query=T.M.+Hotel,+50+West+Perumal+Maistry+Street,+Madurai+625001"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--primary btn--sm"
+              >
+                Open T.M. Hotel in Google Maps &rarr;
+              </a>
+              <a href="/contact" class="btn btn--outline-light btn--sm">
+                Full Contact &amp; Directions Page
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section class="section section--sand" id="gallery">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div class="reveal-up">
+            <span class="eyebrow">Visual Tour</span>
+            <h2 class="display-title">Inside <em>T.M. Hotel</em></h2>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
+            <div class="filter-pills reveal-up" id="galleryFilterPills" role="group" aria-label="Filter gallery photos">
+              <button type="button" class="filter-pill is-active" data-filter="all">All Photos</button>
+              <button type="button" class="filter-pill" data-filter="rooms">Rooms</button>
+              <button type="button" class="filter-pill" data-filter="views">Terrace &amp; Views</button>
+              <button type="button" class="filter-pill" data-filter="architecture">Lobby &amp; Design</button>
+            </div>
+            <a href="/gallery" class="btn btn--dark btn--sm">Full Gallery &rarr;</a>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- Guest Stories & FAQs -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <span class="eyebrow">Guest Voices</span>
+          <h2 class="display-title">Trusted by <em>Pilgrims &amp; Travelers</em></h2>
+        </div>
+
+        <div class="testimonials-slider reveal-up" id="testimonialsSlider">
+          <div class="testimonials-track" id="testimonialsTrack"></div>
+          <div class="slider-controls">
+            <div class="slider-dots" id="testimonialDots"></div>
+            <div class="slider-arrows">
+              <button type="button" class="icon-circle-btn" id="testimonialPrev" aria-label="Previous testimonial">&larr;</button>
+              <button type="button" class="icon-circle-btn" id="testimonialNext" aria-label="Next testimonial">&rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sand" id="faqs">
+      <div class="container">
+        <div class="section-head reveal-up" style="text-align: center; align-items: center;">
+          <span class="eyebrow">Guest Information</span>
+          <h2 class="display-title">Frequently Asked <em>Questions</em></h2>
+        </div>
+        <div class="faq-list reveal-up" id="faqList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="brand-logo" style="margin-bottom: 1rem;">
+            <svg class="brand-logo__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="2" width="44" height="44" rx="11" stroke="#DFB26B" stroke-width="1.5" />
+              <path d="M13 35V22C13 15.9249 17.9249 11 24 11C30.0751 11 35 15.9249 35 22V35" stroke="#DFB26B" stroke-width="1.6" />
+              <path d="M19 35V24C19 21.2386 21.2386 19 24 19C26.7614 19 29 21.2386 29 24V35" stroke="#C89648" stroke-width="1.4" />
+              <path d="M10 35H38" stroke="#DFB26B" stroke-width="1.5" />
+            </svg>
+            <div class="brand-logo__text">
+              <span class="brand-logo__name">T.M. Hotel</span>
+              <span class="brand-logo__tag">A Division of T.M. Group (Est. 1950)</span>
+            </div>
+          </a>
+          <p style="font-size: 0.875rem; color: var(--text-light-muted); max-width: 34ch;">
+            Our Motto is to provide a Pleasant Stay and a Homely Care to our Prestigious Customers — 57 air-conditioned rooms steps from Madurai Junction &amp; Meenakshi Temple.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Pages</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/rooms">All Rooms &amp; Tariff</a></li>
+            <li><a href="/deluxe-room">Deluxe Room</a></li>
+            <li><a href="/executive-room">Executive Room</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/near-by-attractions">Sight Seeing In Madurai</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Reservations</h4>
+          <ul class="footer-links">
+            <li><a href="/book-now">Book Now (Direct Engine)</a></li>
+            <li><a href="/quick-pay">Quick Pay Portal</a></li>
+            <li><a href="/contact">Contact Us &amp; Map</a></li>
+            <li><a href="https://wa.me/917708681651" target="_blank" rel="noopener">WhatsApp Concierge</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Address &amp; Hours</h4>
+          <ul class="footer-links">
+            <li>50, West Perumal Maistry Street, Madurai - 625001</li>
+            <li>Check-In: 12:00 PM &bull; Check-Out: 11:00 AM</li>
+            <li><a href="tel:+917708681651">+91 7708681651</a> / <a href="tel:+914522341651">+91 452 2341651</a></li>
+            <li><a href="mailto:reservations@tmhotel.in">reservations@tmhotel.in</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 T.M. Hotel, Madurai (T.M. Group of Companies). All rights reserved.</span>
+        <span>Use promo code <strong style="color: var(--accent-brass-bright);">TM1950</strong> for 10% direct-stay savings.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bottom Concierge Bar -->
+  <div class="mobile-sticky-bar" aria-label="Quick Mobile Actions">
+    <a href="tel:+917708681651" class="mobile-sticky-bar__call">Call Desk</a>
+    <a href="https://wa.me/917708681651" target="_blank" rel="noopener" class="mobile-sticky-bar__wa">WhatsApp</a>
+    <a href="/book-now" class="mobile-sticky-bar__book">Book Now</a>
+  </div>
+
+  <!-- Floating WhatsApp Concierge (Desktop/Tablet) -->
+  <a
+    href="https://wa.me/917708681651?text=Hello%20T.M.%20Hotel%20Madurai%2C%20I%20would%20like%20assistance%20with%20a%20stay%20or%20sightseeing%20booking."
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-fab"
+    aria-label="Chat on WhatsApp with T.M. Hotel Madurai"
+    title="Chat on WhatsApp"
+  >
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.03 2a9.97 9.97 0 0 0-8.46 15.27L2 22l4.86-1.53A9.98 9.98 0 1 0 12.03 2Zm5.82 14.13c-.24.68-1.42 1.3-1.97 1.38-.52.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.03-1.31-5-4.38-5.15-4.58-.15-.2-1.23-1.64-1.23-3.13s.78-2.22 1.06-2.52c.28-.3.6-.38.8-.38h.58c.19 0 .44-.07.69.52.24.6.83 2.04.9 2.19.08.15.13.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.31.32-.13.62.18.3.79 1.3 1.7 2.11 1.17 1.04 2.15 1.36 2.45 1.51.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.08.13.08.73-.17 1.41Z" />
+    </svg>
+  </a>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+    <!-- Direct Reservation Modal -->
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow" style="margin-bottom: 0.25rem;">Best Direct Rate Guaranteed</span>
+          <h2 id="bookingModalTitle" style="font-family: var(--font-display); font-size: 2rem;">Reserve Your Stay</h2>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close booking dialog">&times;</button>
+      </div>
+
+      <form id="bookingForm" class="form-grid" novalidate>
+        <div class="form-grid form-grid--2">
+          <div class="field-group">
+            <label for="bookingCheckIn">Check-In Date *</label>
+            <input type="date" id="bookingCheckIn" required />
+          </div>
+          <div class="field-group">
+            <label for="bookingCheckOut">Check-Out Date *</label>
+            <input type="date" id="bookingCheckOut" required />
+          </div>
+        </div>
+
+        <div class="form-grid form-grid--2">
+          <div class="field-group">
+            <label for="bookingRoom">Room Category *</label>
+            <select id="bookingRoom"></select>
+          </div>
+          <div class="field-group">
+            <label for="bookingGuests">Guests</label>
+            <select id="bookingGuests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid form-grid--2">
+          <div class="field-group">
+            <label for="bookingPromo">Promo Code (Try TM1950)</label>
+            <input type="text" id="bookingPromo" placeholder="TM1950 for 10% off" value="TM1950" />
+          </div>
+          <div class="field-group" style="justify-content: flex-end;">
+            <label style="display: flex; align-items: center; gap: 0.55rem; min-height: 44px; cursor: pointer;">
+              <input type="checkbox" id="bookingBreakfast" style="width: 18px; height: 18px; min-height: 18px;" />
+              Add South Indian Veg Breakfast (+₹200/guest/night)
+            </label>
+          </div>
+        </div>
+
+        <div class="rate-summary" id="bookingRateSummary"></div>
+
+        <div class="form-grid form-grid--2">
+          <div class="field-group">
+            <label for="bookingName">Guest Full Name *</label>
+            <input type="text" id="bookingName" required placeholder="Full name as on ID" />
+          </div>
+          <div class="field-group">
+            <label for="bookingPhone">Mobile / WhatsApp *</label>
+            <input type="tel" id="bookingPhone" required placeholder="+91 98..." />
+          </div>
+        </div>
+
+        <div class="form-grid form-grid--2">
+          <div class="field-group">
+            <label for="bookingEmail">Email (Optional)</label>
+            <input type="email" id="bookingEmail" placeholder="name@example.com" />
+          </div>
+          <div class="field-group">
+            <label for="bookingNotes">Arrival Time / Special Request</label>
+            <input type="text" id="bookingNotes" placeholder="e.g. Early morning train arrival" />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 0.25rem;">
+          Request Instant Reservation
+        </button>
+        <div class="form-feedback" id="bookingFeedback" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+  
+    <!-- Quick Pay Modal -->
+  <div class="modal-backdrop" id="quickPayModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quickPayTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow" style="margin-bottom: 0.25rem;">Digital Settlement</span>
+          <h2 id="quickPayTitle" style="font-family: var(--font-display); font-size: 2rem;">T.M. Hotel Quick Pay</h2>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close Quick Pay dialog">&times;</button>
+      </div>
+
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.15rem;">
+        Log an advance reservation payment or settle an active room invoice. Our desk confirms digital receipts immediately.
+      </p>
+
+      <form id="quickPayForm" class="form-grid" novalidate>
+        <div class="form-grid form-grid--2">
+          <div class="field-group">
+            <label for="qpRef">Booking Ref / Room No.</label>
+            <input type="text" id="qpRef" placeholder="e.g. TMH-20261120 or Room 204" />
+          </div>
+          <div class="field-group">
+            <label for="qpAmount">Amount (INR) *</label>
+            <input type="number" id="qpAmount" min="100" step="50" required placeholder="2500" />
+          </div>
+        </div>
+
+        <div class="form-grid form-grid--2">
+          <div class="field-group">
+            <label for="qpName">Guest Name *</label>
+            <input type="text" id="qpName" required placeholder="Full name" />
+          </div>
+          <div class="field-group">
+            <label for="qpPhone">Mobile Number *</label>
+            <input type="tel" id="qpPhone" required placeholder="+91 98..." />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="qpMethod">Preferred Digital Mode</label>
+          <select id="qpMethod">
+            <option value="UPI (GPay / PhonePe / Paytm)">UPI (GPay / PhonePe / Paytm)</option>
+            <option value="Credit / Debit Card">Credit / Debit Card</option>
+            <option value="NEFT / Bank Transfer">NEFT / Bank Transfer</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--primary" style="width: 100%;">
+          Generate Quick Pay Reference
+        </button>
+        <div class="form-feedback" id="quickPayFeedback" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Room Detail Modal -->
+  <div class="modal-backdrop" id="roomDetailModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Room Details">
+    <div class="modal-dialog">
+      <div class="modal-header" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0.5rem;">
+        <span></span>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close room details">&times;</button>
+      </div>
+      <div id="roomDetailContent"></div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="modal-backdrop" id="lightboxModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image Lightbox">
+    <div class="modal-dialog lightbox-dialog">
+      <div class="modal-header" style="border-bottom-color: var(--border-dark);">
+        <div>
+          <strong id="lightboxTitle" style="font-family: var(--font-display); font-size: 1.4rem;"></strong>
+          <div id="lightboxCount" style="font-size: 0.8rem; color: var(--accent-brass-bright);"></div>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close lightbox">&times;</button>
+      </div>
+      <div class="lightbox-stage">
+        <img id="lightboxImg" src="assets/images/hero-hotel.jpg" alt="Gallery preview" />
+      </div>
+      <div class="lightbox-bar">
+        <button type="button" class="btn btn--outline-light btn--sm" id="lightboxPrev">&larr; Previous</button>
+        <button type="button" class="btn btn--outline-light btn--sm" id="lightboxNext">Next &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="js/data.js?v=8" defer></script>
+  <script src="js/animations.js?v=8" defer></script>
+  <script src="js/main.js?v=8" defer></script>
+</body>
+</html>

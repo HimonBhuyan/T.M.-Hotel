@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/api/booking.php", "destination": "/api/booking" },
+    { "source": "/index.php", "destination": "/" },
+    { "source": "/rooms.php", "destination": "/rooms" },
+    { "source": "/deluxe-room.php", "destination": "/deluxe-room" },
+    { "source": "/executive-room.php", "destination": "/executive-room" },
+    { "source": "/gallery.php", "destination": "/gallery" },
+    { "source": "/near-by-attractions.php", "destination": "/near-by-attractions" },
+    { "source": "/contact.php", "destination": "/contact" },
+    { "source": "/quick-pay.php", "destination": "/quick-pay" },
+    { "source": "/book-now.php", "destination": "/book-now" }
+  ]
+}
